@@ -9,15 +9,68 @@ class App extends React.Component {
     started: false,
     redHand: [],
     blueHand: [],
-    cards: {}
-  }
-
-  componentDidMount(){
-    fetch("http://localhost:3000/cards")
-    .then(res=>res.json())
-    .then(json=> {
-      this.setState({cards: json})
-    })
+    cards: {
+        "♥": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "♠": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "♦": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "♣": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      }
   }
 
   startGame = () => {
@@ -65,25 +118,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-// shuflr before messing with the structure of the data:
-
-// shuflr = (suit, name) => {
-//   let tempBlue = this.state.blueHand;
-//   let tempRed = this.state.redHand;
-
-//   suit.forEach(card => {
-//     if(tempBlue.length>= 26){
-//       tempRed.push({[name]: card})
-//     }
-//     else if(tempRed.length>=26){
-//       tempBlue.push({[name]: card})
-//     }
-//     else if((Math.floor(Math.random()*100))%2 === 0){
-//       tempBlue.push({[name]: card})
-//     }
-//     else if(tempRed) tempRed.push({[name]: card})
-//   })
-//   this.setState({redHand: tempRed, blueHand: tempBlue})
-// }
