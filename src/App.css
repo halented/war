@@ -31,3 +31,63 @@
     transform: rotate(360deg);
   }
 }
+
+.homie,.gamie {
+  height: 100vh;
+}
+
+.gamie {
+  display: grid;
+  grid-template-columns: 10;
+  grid-template-rows: 10;
+}
+
+.card {
+  margin: 30px;
+  max-height: 30%;
+  max-width: 30%;
+  justify-self: center;
+}
+
+#quit {
+  position: fixed;
+}
+#red, #blue {
+  max-height: 50%;
+}
+
+#bplay, #rplay {
+  max-height: 70%;
+}
+
+#red {
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#blue {
+  grid-row: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#bPlay {
+  grid-row: 3;
+  justify-self: flex-start
+}
+
+#rPlay {
+  grid-row: 2;
+  justify-self: flex-start
+}
+
+#redcount {
+  justify-self: flex-start;
+  grid-row: 2;
+}
+
+#bluecount {
+  justify-self: flex-start;
+  grid-row: 3;
+}
