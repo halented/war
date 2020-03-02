@@ -8,7 +8,7 @@ import toaster from 'toasted-notes';
 class Gamepage extends Component {
 
     quit = () => {
-        if(window.confirm("This will quit the game for both players, and you will look like a bastard. Are you sure?")){
+        if(window.confirm("This will quit the game for both players, how fun. Are you sure?")){
             window.location='/'
         }
     }
