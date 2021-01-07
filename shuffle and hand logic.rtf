@@ -1,0 +1,50 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 (will need either a class or state of the hands)\
+\
+option 1: \
+use math.random to assign a card to the red or blue hand, only allowing a total of 26 cards per hand\
+\
+bear in mind that once the cards are shuffled into their hands, they will need to be able to change hands. will probably do this with a different function though, so that may be ok. this function will be the initialDeal. \
+\
+arrays for hands in state\
+\
+modular to check for odd or even, odds>>blue, evens>>red\
+iterate through each suit individually\
+if arr.length for either hand is 26, give the card to the other hand. \
+\
+card structure in the hand will look like this:\
+\
+redHand: [\
+	\{clubs: [2,3,10,\'92A\'92, \'91J\'92], 9\},\
+	\{diamonds: [2,3,10,\'92A\'92, \'91J\'92, \'91Q\'92]\},\
+	\{hearts: [2,3,10,\'92A\'92, \'91J\'92, \'91K\'92, 8, 7]\},\
+	\{spades: [2,3, 6, 10,\'92A\'92, \'91J\'92]\}\
+]\
+\
+\
+\
+-gamepage should pull player details from database, i quit button should update the database. \
+\
+\
+steps for playing a card:\
+\
+	1. select one random card from the player\'92s hand.\
+	2. populate the played card with the information from the selected card\
+	3. compare the played card with the other played card\
+	4. determine which is higher\
+	5. remove the lower card from the original player\'92s hand\
+	6. place it into the other player\'92s hand\
+\
+\
+board must be cleared after play. \'97done\
+create win page \
+make actual wars\
+add an event listener to speed up gameplay\
+make it possible for two people to play it together? - sockets\
+}
